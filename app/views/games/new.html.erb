@@ -1,0 +1,12 @@
+<ul id = "letters">
+  <% @letters.each do |char| %>
+      <li><%= char.capitalize %></li>
+  <% end %>
+</ul>
+ <form action="/score" method= "POST">
+  <h1>New game:</h1>
+    <label for="answer">What is the largest word you can think of?</label>
+    <input type="text" class="form-control" name="answer" placeholder="What can you think of?">
+    <input type="submit" value="Try your luck!"></button>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
